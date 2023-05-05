@@ -1,0 +1,129 @@
+{
+  "id": "cc321a00-cfe8-4865-b1ab-638f98e7e156",
+  "version": "2.0",
+  "name": "teste-correios",
+  "url": "https://buscacepinter.correios.com.br/app/endereco/index.php",
+  "tests": [{
+    "id": "31e718fd-5cc8-42d7-b54a-4b6ca6ad93c6",
+    "name": "teste-correio",
+    "commands": [{
+      "id": "cb0689c3-60ce-4993-b644-0830b1404e4b",
+      "comment": "",
+      "command": "open",
+      "target": "https://buscacepinter.correios.com.br/app/endereco/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "459ab6bb-1c8f-4b71-b7fe-fa31d1396c6f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c50a9611-c04d-4031-b40e-d84995b8d0df",
+      "comment": "",
+      "command": "click",
+      "target": "css=main",
+      "targets": [
+        ["css=main", "css:finder"],
+        ["xpath=//main", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe13b066-ad1e-4531-8be2-dabeb0e4e8e5",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#titulo_tela > h2",
+      "targets": [
+        ["css=#titulo_tela > h2", "css:finder"],
+        ["xpath=//div[@id='titulo_tela']/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Busca CEP')]", "xpath:innerText"]
+      ],
+      "value": "Busca CEP"
+    }, {
+      "id": "5d612a8a-5e48-4362-81f9-7d14ae45bfda",
+      "comment": "",
+      "command": "click",
+      "target": "css=main",
+      "targets": [
+        ["css=main", "css:finder"],
+        ["xpath=//main", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c737b1f-87c5-4377-ae7b-7415e9c5da49",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.required label",
+      "targets": [
+        ["css=.required label", "css:finder"],
+        ["xpath=//section[@id='inicioConteudo']/div/div/div/label", "xpath:idRelative"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'Digite um CEP ou um Endereço:')]", "xpath:innerText"]
+      ],
+      "value": "Digite um CEP ou um Endereço:"
+    }, {
+      "id": "5779dd2f-a706-4446-b5d9-f6d05e336434",
+      "comment": "",
+      "command": "click",
+      "target": "id=endereco",
+      "targets": [
+        ["id=endereco", "id"],
+        ["name=endereco", "name"],
+        ["css=#endereco", "css:finder"],
+        ["xpath=//input[@id='endereco']", "xpath:attributes"],
+        ["xpath=//section[@id='inicioConteudo']/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffee2637-feaf-403b-95b0-eb30c4918a85",
+      "comment": "",
+      "command": "type",
+      "target": "id=endereco",
+      "targets": [
+        ["id=endereco", "id"],
+        ["name=endereco", "name"],
+        ["css=#endereco", "css:finder"],
+        ["xpath=//input[@id='endereco']", "xpath:attributes"],
+        ["xpath=//section[@id='inicioConteudo']/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "rua dorian pontes de paula"
+    }, {
+      "id": "ab014fe2-23f8-483e-9697-0ae40700d6dc",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn_pesquisar",
+      "targets": [
+        ["id=btn_pesquisar", "id"],
+        ["name=btn_pesquisar", "name"],
+        ["css=#btn_pesquisar", "css:finder"],
+        ["xpath=//button[@id='btn_pesquisar']", "xpath:attributes"],
+        ["xpath=//section[@id='inicioConteudo']/div[3]/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6707c1e4-fc2b-4e35-a99c-1b3573af542e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7df04046-3dab-40f3-87d3-71e6e584a2af",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["31e718fd-5cc8-42d7-b54a-4b6ca6ad93c6"]
+  }],
+  "urls": ["https://buscacepinter.correios.com.br/app/endereco/index.php"],
+  "plugins": []
+}
